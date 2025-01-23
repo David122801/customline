@@ -1,12 +1,12 @@
 import React from "react";
+import './Personalizar.css';
+
 
 function Personalizar() {
   return (
-    
-    <div>
-      <h2>Personalización</h2>
-      <p>Aquí puedes personalizar tus productos como desees.</p>
-    </div>
+    <>
+
+    </>
   );
 }
 
