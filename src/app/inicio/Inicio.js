@@ -8,9 +8,8 @@ function Inicio() {
     <div className="container">
     <header className="header">
       <nav>
-        {/* Usar Link para manejar rutas */}
-        
-        
+    
+  
       </nav>
       <h1>¡Bienvenidos!</h1>
       <p>Somos la mejor opción si deseas cualquier tipo de customización...</p>
