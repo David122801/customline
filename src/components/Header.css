@@ -1,5 +1,12 @@
 
-@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
-.title{
-    font-family: 'poppins-thin';
+@import url('https://fonts.googleapis.com/css2?family=Cedarville+Cursive&family=Playfair+Display:wght@100..400&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+
+.title {
+    
+    font-family: 'Playfair Display', cursive; /* Fuente cursiva corregida */
+    font-size: 100px; /* Tamaño de fuente ajustable */
+    text-align: center; /* Centrar el título */
+     /* Espaciado arriba y abajo del título */
+    color: #333; /* Color del texto, puedes cambiarlo */
 }

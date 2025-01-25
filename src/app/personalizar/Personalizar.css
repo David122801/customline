@@ -1,0 +1,15 @@
+.customer {
+    background-color: rgb(255, 255, 255);
+
+    height: 700px;
+    
+    display: flex;
+    flex-direction: row;
+    text-align: left;
+    margin: 20px;
+    margin-left: 0px;
+}
+
+.customer label {
+    padding: 20px;
+}

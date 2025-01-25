@@ -1,6 +1,6 @@
 body {
     margin: 0;
-    font-family: 'Arial', sans-serif;
+    font-family: 'Monserrat';
     line-height: 1.6;
     background-color: #f4f4f9;
     color: #333;
@@ -83,7 +83,7 @@ body {
   }
   
   .contact-form button:hover{
-      background-color: #6d6d6d;
+      background-color: #555555;
   
   }
   

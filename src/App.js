@@ -1,24 +1,27 @@
-
 import React from "react";
 import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
-import Personalizar from "./app/personalizar/Personalizar.js";
-import Inicio from './app/inicio/Inicio.js';
-import Header from "./components/Header.js";
 
+import Personalizar from "./app/personalizar/Personalizar.js";
+import Inicio from "./app/inicio/Inicio.js";
+import Header from "./components/Header.js";
+import './App.css'
 
 function App() {
   return (
-    <div>
-      <Header />
-      <Router>
+    <Router>
+      <div>
+        <Header />
+        <nav className="Navbar">
+          <Link to="/" >Inicio</Link>
+          <Link to="/personalizar"  >Personalizar</Link>
+        </nav>
         <Routes>
-          <Route path="/" component={Inicio} />
-          <Route path="/personalizar" component={Personalizar} />
+          <Route path="/" element={<Inicio />} />
+          <Route path="/personalizar" element={<Personalizar />} />
         </Routes>
-      </Router>
-
-    </div>
-  )
+      </div>
+    </Router>
+  );
 }
 
 export default App;
