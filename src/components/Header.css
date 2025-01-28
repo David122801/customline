@@ -3,8 +3,8 @@
 
 
 .title {
-    
-    font-family: 'Playfair Display', cursive; /* Fuente cursiva corregida */
+    margin: 10px;
+    font-family: 'Playfair Display'; /* Fuente cursiva corregida */
     font-size: 100px; /* Tamaño de fuente ajustable */
     text-align: center; /* Centrar el título */
      /* Espaciado arriba y abajo del título */
