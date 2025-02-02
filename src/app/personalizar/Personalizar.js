@@ -1,26 +1,48 @@
-import React, { Suspense } from "react";
-import "./Personalizar.css"; // Archivo CSS para los estilos
-import { Canvas } from 'react-three-fiber';
-import { Mug } from './Mug/Mug';
-import { OrbitControls, Environment } from '@react-three/drei';
+import React, { Suspense, useState } from "react";
+import "./Personalizar.css";
+import { Canvas } from "@react-three/fiber";
+import { Mug } from "./Mug/Mug";
+import { OrbitControls, Environment } from "@react-three/drei";
 
 const Personalizar = () => {
+  const [imageTexture, setImageTexture] = useState(null);
+
+  // Función para manejar la carga de imágenes
+  const handleImageUpload = (event) => {
+    const file = event.target.files[0];
+    if (file) {
+      const url = URL.createObjectURL(file);
+      setImageTexture(url);
+    }
+  };
+
   return (
     <>
       <h1>Personalizar</h1>
 
-      <div style={{ width: '100%', height: "88vh" }}>
-        <Canvas className="modelo" camera={{ zoom: 1, position: [5, 10, 5] }} >
-          <ambientLight intensity={0.5} />
-          <pointLight position={[35, 35, 0]} intensity={0.4} />
-          <pointLight position={[-35, 35, 0]} intensity={0.4} />
+      <div className="simulador">
 
-          <Suspense fallback={null}>
-            <Mug />
-            <Environment preset="sunset" />
-          </Suspense>
-          <OrbitControls />
-        </Canvas>
+        <div className="opciones">
+          <label>Carga una imagen</label>
+          <input type="file" accept="image/*" onChange={handleImageUpload} />
+          <label>Seleciona Color</label>
+        </div>
+
+        <div className="modelo" style={{ width: "100%", height: "88vh" }}>
+
+          <Canvas camera={{ zoom: 1, position: [5, 10, 5] }}>
+
+            <ambientLight intensity={0.5} />
+            <pointLight position={[35, 35, 0]} intensity={0.4} />
+            <pointLight position={[-35, 35, 0]} intensity={0.4} />
+
+            <Suspense fallback={null}>
+              <Mug imageTexture={imageTexture} />
+              <Environment preset="sunset" />
+            </Suspense>
+            <OrbitControls />
+          </Canvas>
+        </div>
       </div>
     </>
   );

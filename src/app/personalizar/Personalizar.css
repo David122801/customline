@@ -19,9 +19,12 @@
     margin-top: 20px;
     margin-left: 20px;
 }
-.modelo{
-
-    background: white;
-    height: 500px;
-    border-radius: 5%;
+.simulador{
+    display: flex;
+    flex-direction: row;
+    
+    
+}
+.opciones{
+    margin-right: 10px ;
 }
