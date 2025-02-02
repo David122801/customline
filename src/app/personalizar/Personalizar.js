@@ -18,7 +18,7 @@ const Personalizar = () => {
 
   return (
     <>
-      <h1>Personalizar</h1>
+      <h1 className="perso">Personalizar</h1>
 
       <div className="simulador">
 
@@ -28,20 +28,19 @@ const Personalizar = () => {
           <label>Seleciona Color</label>
         </div>
 
-        <div className="modelo" style={{ width: "100%", height: "88vh" }}>
+        <div className="modelo" style={{ width: "80%", height: "88vh" }}>
 
-          <Canvas camera={{ zoom: 1, position: [5, 10, 5] }}>
-
+          <Canvas camera={{ zoom: 0.8, position: [6, 6, 6] }}>
             <ambientLight intensity={0.5} />
             <pointLight position={[35, 35, 0]} intensity={0.4} />
             <pointLight position={[-35, 35, 0]} intensity={0.4} />
-
             <Suspense fallback={null}>
               <Mug imageTexture={imageTexture} />
               <Environment preset="sunset" />
             </Suspense>
             <OrbitControls />
           </Canvas>
+
         </div>
       </div>
     </>
